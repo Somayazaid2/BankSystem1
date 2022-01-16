@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "express": "^4.17.2",
+    "fs": "^0.0.1-security",
+    "hbs": "^4.2.0",
+    "mongodb": "^4.3.0",
+    "nodemon": "^2.0.15",
+    "validator": "^13.7.0"
+  }
+}

@@ -1,0 +1,32 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-3">
+    <h2>Edit Client Data</h2>
+    {{#if isNotFound}}
+    <div class="alert alert-danger">
+        user not found
+    </div>
+    {{else}}
+    <form method='post'>
+         <div class="mb-3">
+            <input class="form-control" name="accNum" value="{{user.accNum}}" >
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="name"  value="{{user.name}}">
+        </div>
+         <div class="mb-3">
+            <input class="form-control" name="address" value="{{user.address}}">
+        </div>
+         <div class="mb-3">
+            <input class="form-control" name="Phone" value="{{user.phone}}">
+        </div>
+         <div class="mb-3">
+            <input class="form-control" name="initialBalance" value="{{user.initialBalance}}">
+        </div>
+        <div class="mb-3">
+             <button class="btn btn-primary">Edit</button>
+        </div>
+    </form>
+    {{/if}}
+</section>
+{{>footer}}

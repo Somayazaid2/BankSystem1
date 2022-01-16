@@ -1,0 +1,37 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-3">
+    <h2>Add New Client (POST)</h2>
+        <form method='post'>
+         <div class="mb-3">
+             <label>Account Number</label>
+            <input class="form-control" name="accountNum" value='{{user.accNum}}'>
+        </div>
+        <div class="mb-3">
+            <label>Name</label>
+            <input class="form-control" name="name" value='{{user.name}}'>
+            {{#if errors.name}}
+                <div class="text-danger"><span>{{errors.name}}</span></div>
+            {{/if}}
+        </div>
+         <div class="mb-3">
+            <label>Address</label>
+            <input class="form-control" name="address" value="{{user.address}}">
+        </div>
+         <div class="mb-3">
+            <label>Phone</label>
+            <input class="form-control" name="phone" value="{{user.phone}}">
+            {{#if errors.phone}}
+                <div class="text-danger"><span>{{errors.phone}}</span></div>
+            {{/if}}
+        </div>
+         <div class="mb-3">
+            <label>Initial Balance</label>
+            <input class="form-control" name="initialBalance" value="{{user.initialBalance}}" >
+        </div>
+        <div class="mb-3">
+             <button class="btn btn-primary">Add Client</button>
+        </div>
+    </form>
+</section>
+{{>footer}}

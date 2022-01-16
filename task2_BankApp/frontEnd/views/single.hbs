@@ -1,0 +1,46 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-3">
+    <div class="border border-3 border-primary p-4">
+        {{#if isNotFound}}
+            <div class="alert alert-danger">
+                client not found
+            </div>        
+        {{else}}
+        <h5>Account Number: {{user.accNum}}</h5>
+        <h6>Name: {{user.name}}</h6>
+        <p>
+            Address: {{user.address}}
+        </p>
+        <p>
+             Phone:{{user.phone}}
+        </p>
+        <p>
+            Initial Balance: {{user.initialBalance}}
+            
+        </p>
+
+    </div>
+    <div class="border border-3 border-primary p-4">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Transaction ADD</th>
+                    <th>Transaction Withdraw</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <td>{{this.no}}</td>
+                    <td>{{this.transactionAdd}}</td>
+                    <td>{{this.transactionWithdraw}}</td>
+                </tr>
+                {{/each}}
+        {{/if}}
+              
+            </tbody>
+        </table>
+    </div>
+{{>footer}}
