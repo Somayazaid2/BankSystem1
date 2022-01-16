@@ -124,11 +124,11 @@ class Client{
         })
     }
 
-      static transActionAdd=(req,res)=>{
+      static transAction=(req,res)=>{
         const accNum =req.params.accNum
-        res.render('transactionadd')
+        res.render('transaction')
       }
-      static transActionAddLogic=(req,res)=>{
+      static transActionLogic=(req,res)=>{
         const accNum=req.params.accNum
         const transactionValue = req.body.value
         dbConnection((error,client,db)=>{
@@ -141,7 +141,7 @@ class Client{
             })
         })
       }
-      static transactionWithdraw=(req,res)=>{
+     /* static transactionWithdraw=(req,res)=>{
         res.render("transactionWithdraw")
       }
       static transactionWithdrawLogic=(req,res)=>{
@@ -157,6 +157,6 @@ class Client{
             })
         })
 
-    }
+    }*/
 }
 module.exports = Client

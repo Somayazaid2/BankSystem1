@@ -13,10 +13,10 @@ router.post('/edit/:accNum',Client.editClientLogic)
 router.get('/delete/:accNum',Client.deleteClient)
 router.get('/single/:accNum',Client.singleClient)
 
-router.get('/transactionadd/:accNum',Client.transActionAdd)
-router.post('/transactionadd/:accNum',Client.transActionAddLogic)
-router.get('/transactionWithdraw/:accNum',Client.transactionWithdraw)
-router.post('/transactionWithdraw/:accNum',Client.transactionWithdrawLogic)
+router.get('/transaction/:accNum',Client.transAction)
+router.post('/transaction/:accNum',Client.transActionLogic)
+//router.get('/transactionWithdraw/:accNum',Client.transactionWithdraw)
+//router.post('/transactionWithdraw/:accNum',Client.transactionWithdrawLogic)
 
 
 module.exports= router
